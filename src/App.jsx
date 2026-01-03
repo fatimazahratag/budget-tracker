@@ -1,38 +1,22 @@
-
-// export default function App() {
-//   return (
-//     <div> App</div>
-//   );
-
-import { Children } from "react";
-
-// }
-function Title({ Children,text ,color}) {
-  const titleStyle = {
-    color: color,
-    textAlign: 'center',
-    marginTop: '20px',
-    fontSize: '30px',
-    fontWeight: 'bold'
-  };
-{Children}
-  return <h1 style={titleStyle}>{text}</h1>;
-}
+import { Routes, Route, Link } from "react-router-dom";
+import HomePage from "./components/pages/Home";
+import { useContext } from "react";
+import Budget from "./pages/Budget";
+import { Button } from "@/components/ui/button";
 
 const App = () => {
+
   return (
-    <div className="app">
-      <Title text="Hello World!" color="red" />
-      <Title text="React Components" color="blue" />
-      <Title text="Dynamic Styling" color="purple" />
-      <Title text="Welcome to My App" color="navy" />
-      <Title text="Enjoy Your Stay" color="green"/>
-      <Title text="React is Awesome!" color="purple"/>
-      <Title text="Have a Great Day!" color="orange"/>
-      <Title text="Coding is Fun!" color="teal"/>
-      <Title text="Stay Positive!" color="pink"/>
-      <Title text="Keep Learning!" color="brown"/>
-      <Title text="Build Something Amazing!" color="gray"/>
+    <div>
+      
+
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/budget" element={<Budget />} />
+      </Routes>
+
+     
+
     </div>
   );
 };
