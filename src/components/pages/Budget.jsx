@@ -45,7 +45,7 @@ export default function BudgetTracker() {
             <h2 className={styles.subtitle}>Nouvelle dépense</h2>
             <div className={styles.grid}>
               <input placeholder="Libellé" value={name} onChange={(e) => setName(e.target.value)} className={styles.input} />
-              <input type="number" placeholder={`Montant (${currency})`} value={amount} onChange={(e) => setAmount(e.target.value)} className={styles.input} />
+<input type="number" min="0" step="0"  placeholder={`Montant (${currency})`} value={amount} onChange={(e) => setAmount(e.target.value)} className={styles.input}/>
               <select value={category} onChange={(e) => setCategory(e.target.value)} className={styles.select}>{categories.map(c => <option key={c}>{c}</option>)}</select>
               <button onClick={addExpense} disabled={!name || !amount} className={styles.btn}>Ajouter</button>
             </div>
