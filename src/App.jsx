@@ -1,8 +1,6 @@
 import { Routes, Route, Link } from "react-router-dom";
 import HomePage from "./components/pages/Home";
-import { useContext } from "react";
-import Budget from "./pages/Budget";
-import { Button } from "@/components/ui/button";
+import BudgetTracker from "./components/pages/Budget";
 
 const App = () => {
 
@@ -12,7 +10,7 @@ const App = () => {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/budget" element={<Budget />} />
+        <Route path="/budget" element={<BudgetTracker />} />
       </Routes>
 
      
